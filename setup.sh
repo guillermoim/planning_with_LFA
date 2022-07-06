@@ -1,0 +1,5 @@
+export LFA_INITIAL_DIR=$PWD
+export LFA_TRANSLATOR_DIR=$LFA_INITIAL_DIR'/translator'
+export LFA_UNIVERSAL_PDDL_PARSER=$LFA_TRANSLATOR_DIR'/universal-pddl-parser'
+export LFA_PLANNING_DIR=$LFA_INITIAL_DIR'/planning'
+export LFA_FORMULA_INTERPRETER_DIR=$LFA_INITIAL_DIR'/formula_interpreter'
