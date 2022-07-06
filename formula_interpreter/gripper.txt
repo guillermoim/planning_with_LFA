@@ -1,0 +1,8 @@
+FEATURE f_1 = NOT EXISTS x EXISTS y AND AT(x, y), AT_G(x, y)
+FEATURE f_same = AND f_1, EXISTS x EXISTS y AND AND AT(x, y), FIRST:AT_G(x), AT-ROBBY(y)
+FEATURE f_diff = AND f_1, EXISTS x EXISTS y AND AND AT(x, y), FIRST:AT_G(x), NOT AT-ROBBY(y)
+FEATURE f_corr = AND f_1, EXISTS x EXISTS y AND AT_G(x, y), AT-ROBBY(y)
+FEATURE f_incorr = AND f_1, EXISTS x EXISTS y AND AT_G(x, y), NOT AT-ROBBY(y)
+FEATURE f_full = AND f_1, EXISTS x EXISTS y AND AND FIRST:AT_G(x), AT(x, y), NOT EXISTS x AND GRIPPER(x), FREE(x)
+VALUE = +(+(+(+(f_same, *(3, f_diff)), f_corr), *(2, f_incorr)), f_full)
+VECTOR = f_same, f_diff, f_corr, f_incorr, f_full

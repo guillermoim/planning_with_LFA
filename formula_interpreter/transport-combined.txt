@@ -1,0 +1,8 @@
+FEATURE f_1 = NOT EXISTS p EXISTS x AND AT(p, x), AT_G(p, x)
+FEATURE f_closest = AND f_1, EXISTS p EXISTS l AND AND AT(p, l), FIRST:AT_G(p), SHORTEST_PATH(EXISTS p AND VEHICLE(p), AT(p, l), INVERT:ROAD, k_closest, ?, l)
+FEATURE f_full = AND f_1, EXISTS p EXISTS l AND AND AT(p, l), FIRST:AT_G(p), NOT SHORTEST_PATH(EXISTS p AND AND VEHICLE(p), AT(p, l), EXISTS l AND CAPACITY(p, l), EXISTS p CAPACITY-PREDECESSOR(p, l), INVERT:ROAD, k_full, k_closest, l)
+FEATURE f_dest-1 = AND f_1, EXISTS p EXISTS l AND AND AT(p, l), FIRST:AT_G(p), SHORTEST_PATH(SECOND:AT_G(l), ROAD, k_dest-1, ?, l)
+FEATURE f_dest-2 = AND f_1, EXISTS p EXISTS t AND AND IN(p, t), FIRST:AT_G(p), EXISTS p AND AT(t, p), SHORTEST_PATH(SECOND:AT_G(p), ROAD, k_dest-2, ?, p)
+VALUE = +(+(+(*(f_closest, +(k_closest, 1)), *(f_dest-1, +(k_dest-1, 1))), *(f_dest-2, +(k_dest-2, 1))), f_full)
+VECTOR = k_closest, + k_dest-1 k_dest-2, f_full, PREREQUISITES, f_closest, f_dest-1, f_dest-2
+

@@ -1,0 +1,11 @@
+FEATURE f_1 = NOT EXISTS(a, EXISTS(b, AND(ON_G(a, b), ON(a, b))))
+FEATURE f_ba = SHORTEST_PATH(FIRST:ON_G(b), ON, k_b-above-a, ?, b)
+FEATURE f_a = SHORTEST_PATH(CLEAR(a), INVERT:ON, k_above-a, ?, a)
+FEATURE f_ab = SHORTEST_PATH(SECOND:ON_G(a), ON, k_a-above-b, ?, a)
+FEATURE f_b = SHORTEST_PATH(CLEAR(b), INVERT:ON, k_above-b, ?, b))
+FEATURE f_clear-a = AND(f_1, EXISTS a EXISTS b AND(ON_G(a, b), AND(NOT f_ab, f_a)))
+FEATURE f_clear-b = AND(f_1, EXISTS a EXISTS b AND(ON_G(a, b), AND(NOT f_ba, f_b)))
+FEATURE f_p = AND(f_1, EXISTS a HOLDING(a))
+FEATURE f_gp = AND(f_1, EXISTS a EXISTS b AND(ON_G(a, b), NOT AND(CLEAR(b), HOLDING(a))))
+VALUE = +(+(+(*(2, *(f_clear-a, k_above-a)), *(2, *(f_clear-b, k_above-b))), f_p), *(2, f_gp))
+VECTOR = f_clear-a, k_above-a, f_clear-b, k_above-b, f_p, f_gp

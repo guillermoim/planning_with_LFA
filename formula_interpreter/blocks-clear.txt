@@ -1,0 +1,5 @@
+FEATURE f_1 = NOT EXISTS x AND CLEAR(x), CLEAR_G(x)
+FEATURE f_2 = AND f_1, EXISTS x AND CLEAR_G(x), SHORTEST_PATH(CLEAR(x), INVERT:ON, k, ?, x)
+FEATURE f_3 = AND f_1, EXISTS x HOLDING(x)
+VALUE = +(-(*(2, *(f_2, k)), f_2), f_3)
+VECTOR = k, f_3, PREREQUISITES, f_2
