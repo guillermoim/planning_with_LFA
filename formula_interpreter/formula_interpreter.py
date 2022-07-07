@@ -364,6 +364,8 @@ def custom_evaluation(dataset, features, features_matrix_path, value_function, v
     
     new_headings = list(features_lines)
 
+    V = []
+
     for ix, (state, _) in enumerate(dataset):
 
         context = {
@@ -374,6 +376,7 @@ def custom_evaluation(dataset, features, features_matrix_path, value_function, v
         }
 
         function_value = value_function(state, context)
+        V.append(-function_value)
 
         f_vector, p_vector = vector_function(state, context)
 
@@ -387,7 +390,6 @@ def custom_evaluation(dataset, features, features_matrix_path, value_function, v
             new_features_lines.append(final_heading)
 
         line = features_lines[ix].strip('\n').split(";")
-
         line = line[:] + [str(int(x)) for x in vector] + [str(-function_value)+'\n']
 
         line = ";".join(line)
@@ -403,6 +405,8 @@ def custom_evaluation(dataset, features, features_matrix_path, value_function, v
     
     with open(os.path.join(dirname, "feat_matrix_extended.csv"), "w") as file:
         file.writelines(new_features_lines)
+
+    return V
 
 
 if __name__ == "__main__":
