@@ -1,0 +1,5 @@
+instance_name,max_num_states
+prob01_0.pddl,10000 
+prob01_1.pddl,10000
+prob02_0.pddl,10000
+prob02_1.pddl,10000
