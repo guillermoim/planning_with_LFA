@@ -1,0 +1,6 @@
+[submodule "planning/dlplan"]
+	path = planning/dlplan
+	url = git@github.com:guillermoim/dlplan.git
+[submodule "planning/tarski"]
+	path = planning/tarski
+	url = git@github.com:guillermoim/tarski.git
