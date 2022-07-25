@@ -2,4 +2,5 @@ instance_name,max_num_states
 p-on-3blocks-0.pddl,500
 p-on-4blocks-0.pddl,1000
 p-on-5blocks-0.pddl,10000
-p-on-6blocks-0.pddl,100000
+p-on-6blocks-0.pddl,10000
+p-on-7blocks-0.pddl,20000

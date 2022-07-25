@@ -6,6 +6,7 @@ import numpy as np
 from data_loader import data_loader
 import os
 
+
 def plot_cov(X, names, filename, title='default'):
     
     df = pd.DataFrame(data=X)
@@ -39,4 +40,4 @@ if __name__ == '__main__':
 
     X, y, names, complexities = data_loader(filepath, filter=False)
 
-    plot_cov(X, names, filename, title='default')
+    remove_features_tes(X, y, names)

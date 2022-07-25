@@ -1,5 +1,5 @@
 import pandas as pd
-
+import numpy as np
 
 def data_loader(filepath, filter=False):
     with open(filepath, "r") as file:
@@ -9,8 +9,9 @@ def data_loader(filepath, filter=False):
     features = df.columns.to_list()
     df = df.to_numpy()
     
-    # Returns feature valuations and target
-    # (features, V*, names, complexities)
-    return df[:-1, :-1], df[:-1, -1], features[:-1], df[-1, :-1]
+    complexities = df[-1, :-1]
+    complexities[np.where(np.isnan(complexities))] = 1.
+
+    return df[:-1, :-1], df[:-1, -1], features[:-1], complexities
 
 

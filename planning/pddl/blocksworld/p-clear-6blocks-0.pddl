@@ -17,7 +17,7 @@
 (:goal
 (and
 (arm-empty)
-(clear b6)
+(clear b1)
 )
 )
 )

@@ -5,6 +5,70 @@ from .score import score
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 
+def quickL0(X, y, names, complexities, maxSupport=8):
+    n, p = np.shape(X)
+    l0learn = rpackages.importr("L0Learn")
+    # Next lines: convert X to R matrix.
+    Xf = X.flatten("F")
+    Xr = robjects.IntVector(Xf)
+    XR = robjects.r["matrix"](Xr, nrow=X.shape[0])
+    yr = robjects.FloatVector(y)
+    rlearn = robjects.r["L0Learn.fit"]
+
+    l0fit = rlearn(XR, yr, algorithm="CDPSI", penalty="L0",
+                    maxSuppSize=maxSupport,)  # lambdaGrid=lambdas
+
+    rprint = robjects.r["print"]
+    res = rprint(l0fit)
+    vlambda = res[0]
+    # vgamma = res[1]
+    vsupp = res[2]
+    yt = np.squeeze(np.array(y))
+
+    res_ = []
+
+    max_score = -1
+    min_supp = 10
+
+    solution = None
+
+    for l in range(len(vlambda)):
+
+        # For different levels of lambda
+        rfunc = robjects.r["coef"]
+        # Fit the object to such lambda value
+        res = rfunc(l0fit, vlambda[l], gamma=0)
+        # Obtain solution
+        weights = res.slots["x"]
+        vidx = res.slots["i"]
+        lnc = res.slots["x"]
+
+        feat_weights = [weights[0]]
+        feat_complexities = []
+        feat_names = []
+
+        for i in range(1, len(lnc)):
+
+            feat_weights.append(round(weights[i], 4))
+            feat_complexities.append(complexities[vidx[i] - 1])
+            feat_names.append(names[vidx[i] - 1])
+
+        rfunc = robjects.r["predict"]
+        res = rfunc(l0fit, XR, vlambda[l], gamma=0)
+        yp = np.squeeze(np.array(res.slots["x"]))
+
+        # Predict score
+        current_score = score(yt, yp)
+        
+        if current_score >= max_score and 0 < vsupp[l] < min_supp:
+            solution = (feat_weights, feat_complexities, feat_names)
+            max_score = current_score
+            min_supp = vsupp[l]
+    
+
+    return solution
+        
+
 def do_l0learn(X, y, idx, complexities, names):
     # Check https://cran.r-project.org/web/packages/L0Learn/vignettes/L0Learn-vignette.html
     # Check https://github.com/rpy2/rpy2 (https://rpy2.github.io/doc/v3.4.x/html/introduction.html#r-packages)

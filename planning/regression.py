@@ -101,6 +101,7 @@ if __name__ == "__main__":
     # fs contains ground truth feats if provided, nfs contains the rest
     fs = []
     nfs = []
+    
     for i in range(p):
         if mask[i]:
             fs.append(i)

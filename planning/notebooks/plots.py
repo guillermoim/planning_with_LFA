@@ -16,9 +16,12 @@ def max_score_by_parameter(df, features):
     ax.set_xticks(df.parameter.to_numpy())
     ax.set_xscale("log")
     
-def max_score_by_num_features(df, step=5):
+def minmax_score_by_num_features(df, step=5, mode='max', ylim=(0.9, 1.001)):
     
-    df = df.loc[df.groupby('total_features')["score"].idxmax()]
+    if mode == 'max':
+        df = df.loc[df.groupby('total_features')["score"].idxmax()]
+    else:
+        df = df.loc[df.groupby('total_features')["score"].idxmin()]
     fig, ax = plt.subplots(1,1, figsize=(9, 6))
 
     ax2 = ax.twinx()
@@ -26,7 +29,7 @@ def max_score_by_num_features(df, step=5):
     ax.set_title(f'Max. score (and opt. param.) by # of features')
     ax.plot(df.total_features.to_numpy(), df.score.to_numpy())
     
-    ax.set_ylim((0.9, 1.001))
+    ax.set_ylim(ylim)
     ax.set_ylabel('score - $R^2$')
     ax.set_xlabel('# features considered')
     

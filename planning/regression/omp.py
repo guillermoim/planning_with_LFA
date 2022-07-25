@@ -3,6 +3,7 @@ import numpy as np
 
 from .score import score
 from sklearn.linear_model import OrthogonalMatchingPursuit
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 
 def do_OMP(X, y, omp_interval, idx, complexities, names):
@@ -21,7 +22,7 @@ def do_OMP(X, y, omp_interval, idx, complexities, names):
             coef = omp.coef_
             (idx_r,) = coef.nonzero()
 
-            print("asasas", idx_r)
+            yp = omp.predict(X)
 
             feat_weights = []
             feat_complexities = []
@@ -42,10 +43,13 @@ def do_OMP(X, y, omp_interval, idx, complexities, names):
                 "parameter": s,
                 "total_features": p,
                 "score": omp.score(X, y),
+                "mae": mean_absolute_error(y, yp),
+                "mse": mean_squared_error(y, yp),
                 "features_names": feat_names,
                 "feature_weights": feat_weights,
                 "feature_complexities": feat_complexities,
-            }
+                "support_size": 0
+                }
 
             res.append(entry)
 

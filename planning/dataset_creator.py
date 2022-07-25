@@ -55,7 +55,6 @@ def main(domain_name, multipath, formula_path, feat_complexity,  flag=True):
     # For each instance, expand the state space and store them both in dlplan and tarski format
     for instance_filename, MAX_NUM_STATES in files:
         print(f'\tExpanding states for {instance_filename}')
-        task = domain_name + instance_filename
         instance = _load_instance(domain, instance_filename)
         tarski_states = expand_states(instance, MAX_NUM_STATES)
         dl_states = [tarski_to_dl_state(instance, state) for state in tarski_states]
@@ -64,7 +63,7 @@ def main(domain_name, multipath, formula_path, feat_complexity,  flag=True):
         states_by_instance[instance_filename].update({'tarski_states': tarski_states})
     
     # Retrieve the key features to compose the value function.
-    KEY_FEATURES, WEIGHTS, BIAS = get_key_features(task, regression=False)
+    MIN_FEATURES, _, _ = get_key_features(task, regression=False)
     # Store all the states in dlplan format in one object and use
     # it to extract the features. So features extracted are inter
     # instance.
@@ -75,16 +74,14 @@ def main(domain_name, multipath, formula_path, feat_complexity,  flag=True):
     
     print('-Extracting features')
     start = timer()
-    features, complexities, F = extract_features(
-        domain, data, feat_complexity, KEY_FEATURES, flag
+    FEATURES_DL, complexities, F = extract_features(
+        domain, data, feat_complexity, MIN_FEATURES, flag
     )
     end = timer()
     elapsed = end - start
-    print(f"\t {len(features)} features extracted (in {elapsed:.4f}s)")
-
-    #print(features)
-
-    KEY_FEATURES_IDXS = list(map(features.index, KEY_FEATURES))
+    print(f"\t {len(FEATURES_DL)} features extracted (in {elapsed:.4f}s)")
+    
+    KEY_FEATURES_IDXS = list(map(FEATURES_DL.index, MIN_FEATURES))
 
     # for ech instance
     for instance_filename in states_by_instance: 
@@ -92,8 +89,7 @@ def main(domain_name, multipath, formula_path, feat_complexity,  flag=True):
         print(f'-Creating dataset (feature matrix) for {instance_filename}')
         dl_states = states_by_instance[instance_filename]['dl_states']
         tarski_states = states_by_instance[instance_filename]['tarski_states']
-        features_evaluations = [evaluate_features_state(F, state, features) for state in dl_states]
-        valid_states = [frozenset(state.as_atoms()) for state in tarski_states]
+        features_evaluations = [evaluate_features_state(F, state, FEATURES_DL) for state in dl_states]
         
         outfilename = instance_filename.split(".")[0]
         outfilename += "-flag" if flag else ""
@@ -103,12 +99,13 @@ def main(domain_name, multipath, formula_path, feat_complexity,  flag=True):
         # Save feat. matrix in built path
         FEAT_MATRIX_PATH = save_features_matrix(
             outpath,
-            features,
+            FEATURES_DL,
             features_evaluations,
             complexities,
         )
         
         # Save feat. matrix in built path
+        valid_states = [frozenset(state.as_atoms()) for state in tarski_states]
         PDDL_STATES_PATH = save_states_pddl(valid_states, domain_name, outpath)
 
         INSTANCE_PATH = f"pddl/{domain_name}/{instance_filename}"
@@ -121,12 +118,49 @@ def main(domain_name, multipath, formula_path, feat_complexity,  flag=True):
 
         print(f'-Extracting extended features for {instance_filename}.')
         dataset, predicates = load_datasets(Path(outpath))
-        (features2, value_function, vector_function) = parse_formula(Path(FORMULA_PATH), predicates)
-        V = custom_evaluation(dataset, features2, FEAT_MATRIX_PATH, value_function,
+        (FEATURES_S, value_function, vector_function) = parse_formula(Path(FORMULA_PATH), predicates)
+        _ = custom_evaluation(dataset, FEATURES_S, FEAT_MATRIX_PATH, value_function,
                         vector_function, False)
-        V = {valid_states[i]:value for (i, value) in enumerate(V)}
-        VALUE_FUNCTION_PATH = save_value_function(V, outpath)
+    
+    for instance_filename in states_by_instance:
+        print(f'-Generating value function and storing features for {instance_filename}.')
+        outfilename = instance_filename.split(".")[0]
+        outfilename += "-flag" if flag else ""
 
+        outpath = f"./results/{domain_name}/{outfilename}"
+        os.makedirs(outpath, exist_ok=True)
+
+        feat_matrix_path = f"./results/{domain_name}/{outfilename}/feat_matrix_extended.csv"
+
+        with open(feat_matrix_path, "r") as file:
+            lines = file.readlines()
+            feat_names, lines, complexities = lines[0].strip('\n').split(';'), lines[1:-1], lines[-1]
+            data = [list(map(float, l.strip('\n').split(';'))) for l in lines]
+            X = np.array(data)
+            X[np.where(X > 1000)] = 0
+
+        KEY_FEATURES, W, BIAS = get_key_features(task, regression=True)
+        KEY_FEATURES_IDXS = list(map(feat_names.index, KEY_FEATURES))
+        V = (X[:, KEY_FEATURES_IDXS] @ W + BIAS).reshape(-1, 1)
+
+        X = X.astype(int)
+        V = V.astype(int)
+        X = np.hstack([X, V])
+        X = [ ';'.join(map(str, e))+'\n' for e in X.tolist()]
+
+
+        # SAVE AGAIN THE FEATURE MATRIX
+        with open(feat_matrix_path, "w") as file:
+            feat_names = feat_names + ['V*\n']
+            heading = ';'.join(feat_names)
+            out = [heading] + X + [complexities]
+            file.writelines(out)
+        
+        valid_states = [frozenset(state.as_atoms()) for state in states_by_instance[instance_filename]['tarski_states']]
+        V = {valid_states[i]:value.item() for (i, value) in enumerate(V)}
+
+        VALUE_FUNCTION_PATH = save_value_function(V, outpath)
+    
 
 if __name__ == "__main__":
 
@@ -136,6 +170,9 @@ if __name__ == "__main__":
     parser.add_argument("--formula_path", type=str)
     parser.add_argument("--flag_features", action="store_true")
     parser.add_argument("--max_complexity", type=int, default=4)
+    parser.add_argument("--task", default="blocksworld-clear")
+
+    global task
 
     args = parser.parse_args()
 
@@ -144,5 +181,6 @@ if __name__ == "__main__":
     formula_path = args.formula_path
     flag_features = args.flag_features
     max_complexity = args.max_complexity
+    task = args.task
 
     main(domain_name, multipath, formula_path, max_complexity, flag_features)

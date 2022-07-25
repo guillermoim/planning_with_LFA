@@ -1,5 +1,6 @@
 instance_name,max_num_states
-prob01_0.pddl,10000 
-prob01_1.pddl,10000
-prob02_0.pddl,10000
-prob02_1.pddl,10000
+prob-2balls.pddl,10000 
+prob-3balls.pddl,10000
+prob-4balls.pddl,10000
+prob-5balls.pddl,10000
+prob-6balls.pddl,10000

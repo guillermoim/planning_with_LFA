@@ -385,14 +385,13 @@ def custom_evaluation(dataset, features, features_matrix_path, value_function, v
         if ix == 0:
             new_headings = [f'F_{i}' for i in range(len(vector))]
             heading = feat_names.split(';')
-            final_headings = heading + new_headings + ['V*\n']
-            final_heading = ";".join(final_headings)
+            final_headings = heading + new_headings 
+            final_heading = ";".join(final_headings) + '\n'
             new_features_lines.append(final_heading)
 
         line = features_lines[ix].strip('\n').split(";")
-        line = line[:] + [str(int(x)) for x in vector] + [str(-function_value)+'\n']
-
-        line = ";".join(line)
+        line = line[:] + [str(int(x)) for x in vector] #+ [str(-function_value)+'\n']
+        line = ";".join(line)+'\n'
         new_features_lines.append(line)
 
         if verbose:

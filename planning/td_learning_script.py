@@ -2,21 +2,19 @@
 import pickle
 import os
 import numpy as np
-from utils.data_loader import data_loader
 
+from src import *
 import sys
 
-sys.path.append("./dlplan/experiments")
-from domain_data import DomainData
-from instance_data import InstanceData
 
 def _load_env(domain, instance_filepath):
-    instance = InstanceData(instance_filepath, domain, 1)
+    instance = InstanceData(instance_filepath, domain)
 
     return instance
 
 
 def _read_value_function(filepath):
+    
     V = {}
 
     with open(filepath) as file:
@@ -36,39 +34,25 @@ def _get_state_index():
 
 def _base_features():
 
-    return [
-        "F_0",
-        #"F_1", 
-        #"F_2",
-        #"n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))",
-        "b_nullary(arm-empty)",
-    ]
+    return [ "n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))",
+             "n_count(c_primitive(holding,0))",]
 
-def _td_learning(W, domain, instance_filepath, value_function_filepath, matrix_filepath):
+def td_learning(W, domain, instance_filepath, value_function_filepath, matrix_filepath):
     
     # 
-    V = _read_value_function(
-       value_function_filepath
-    )
+    V = _read_value_function(value_function_filepath)
 
-    X, y, names, _ = data_loader(
-        matrix_filepath
-    )
+    X, y, feature_names, _ = data_loader(matrix_filepath)
     
-    X[np.where(X > 40000)] = 0
     states_ordered = list(V.keys())
     del V
 
-    indices = [names.index(x) for x in _base_features()]
+    indices = [feature_names.index(x) for x in _base_features()]
 
-    instance = _load_env(
-        domain, instance_filepath
-    )
-
-    goal = instance.problem.goal
+    instance = _load_env(domain, instance_filepath)
 
     X = X[:, indices]
-    X = np.hstack([X, np.ones((X.shape[0], 1))])
+    X = np.hstack([X, np.zeros((X.shape[0], 1))])
     
     state = instance.problem.init
 
@@ -77,9 +61,9 @@ def _td_learning(W, domain, instance_filepath, value_function_filepath, matrix_f
     R = -1
     EPS = 0.3
     
-    for _ in range(50000):
+    for _ in range(100):
 
-        while not state[goal]:
+        while not state[instance.problem.goal]:
 
             state_str = frozenset([str(e) for e in state.as_atoms()])
             idx = states_ordered.index(state_str)
@@ -115,7 +99,7 @@ def _td_learning(W, domain, instance_filepath, value_function_filepath, matrix_f
 
             W = W + ALPHA * (R + LAMBDA * v_ - v) * x
             state = succesor
-
+        print(W)
         EPS *= 0.9
         state = instance.problem.init
     
