@@ -1,0 +1,91 @@
+method,parameter,total_features,score,features_names,feature_weights,feature_complexities
+lasso,2.4512497076292066,2,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,2,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,2,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,2,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,2,-95102.29831612026,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.6868, -0.2085]","[4.0, 2.0]"
+lasso,0.2171480710991139,2,-88482.5944816342,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.8071, -0.5126]","[4.0, 2.0]"
+lasso,0.1337302511228276,2,-83582.03325530568,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.8812, -0.6998]","[4.0, 2.0]"
+lasso,0.08235753591940385,2,-80494.22686691301,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.9268, -0.8151]","[4.0, 2.0]"
+lasso,0.05071974116377088,2,-78605.30926783035,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.9549, -0.8862]","[4.0, 2.0]"
+lasso,2.4512497076292066,13,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,13,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,13,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,13,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,13,-95102.29831612026,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.6868, -0.2085]","[4.0, 2.0]"
+lasso,0.2171480710991139,13,-88482.5944816342,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.8071, -0.5126]","[4.0, 2.0]"
+lasso,0.1337302511228276,13,-83582.03325530568,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.8812, -0.6998]","[4.0, 2.0]"
+lasso,0.08235753591940385,13,-80494.22686691301,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.9268, -0.8151]","[4.0, 2.0]"
+lasso,0.05071974116377088,13,-78605.30926783035,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.9549, -0.8862]","[4.0, 2.0]"
+lasso,2.4512497076292066,24,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,24,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,24,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,24,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,24,-95102.29831612026,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.6868, -0.2085]","[4.0, 2.0]"
+lasso,0.2171480710991139,24,-88482.5944816342,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.8071, -0.5126]","[4.0, 2.0]"
+lasso,0.1337302511228276,24,-83582.03325530568,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.8812, -0.6998]","[4.0, 2.0]"
+lasso,0.08235753591940385,24,-80494.22686691301,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.9268, -0.8151]","[4.0, 2.0]"
+lasso,0.05071974116377088,24,-78605.30926783035,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.9549, -0.8862]","[4.0, 2.0]"
+lasso,2.4512497076292066,35,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,35,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,35,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,35,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,35,-95102.29821025817,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.6868, -0.2085]","[4.0, 2.0]"
+lasso,0.2171480710991139,35,-88482.59428437585,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.8071, -0.5126]","[4.0, 2.0]"
+lasso,0.1337302511228276,35,-84146.08753190133,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-0.0044, -1.8811, -0.6703]","[4.0, 4.0, 2.0]"
+lasso,0.08235753591940385,35,-81863.78113616383,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-0.01, -1.9267, -0.7482]","[4.0, 4.0, 2.0]"
+lasso,0.05071974116377088,35,-80471.77235646591,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-0.0133, -1.9548, -0.7975]","[4.0, 4.0, 2.0]"
+lasso,2.4512497076292066,46,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,46,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,46,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,46,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,46,-95102.29821025817,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.6868, -0.2085]","[4.0, 2.0]"
+lasso,0.2171480710991139,46,-88482.59428437585,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-1.8071, -0.5126]","[4.0, 2.0]"
+lasso,0.1337302511228276,46,-84146.08753190133,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-0.0044, -1.8811, -0.6703]","[4.0, 4.0, 2.0]"
+lasso,0.08235753591940385,46,-81863.78113616383,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-0.01, -1.9267, -0.7482]","[4.0, 4.0, 2.0]"
+lasso,0.05071974116377088,46,-80471.77235646591,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))']","[-0.0133, -1.9548, -0.7975]","[4.0, 4.0, 2.0]"
+lasso,2.4512497076292066,57,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,57,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,57,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,57,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,57,-95102.29772343933,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-1.6864, -0.2085, -0.0004]","[4.0, 2.0, nan]"
+lasso,0.2171480710991139,57,-88482.59381668433,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-1.7947, -0.5126, -0.0124]","[4.0, 2.0, nan]"
+lasso,0.1337302511228276,57,-84143.22431767083,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0044, -1.8614, -0.6703, -0.0198]","[4.0, 4.0, 2.0, nan]"
+lasso,0.08235753591940385,57,-81861.21262945377,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.01, -1.9024, -0.7482, -0.0244]","[4.0, 4.0, 2.0, nan]"
+lasso,0.05071974116377088,57,-80469.40338745453,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0133, -1.9276, -0.7975, -0.0273]","[4.0, 4.0, 2.0, nan]"
+lasso,2.4512497076292066,68,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,68,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,68,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,68,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,68,-95102.29772343933,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-1.6864, -0.2085, -0.0004]","[4.0, 2.0, nan]"
+lasso,0.2171480710991139,68,-88482.59381668433,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-1.7947, -0.5126, -0.0124]","[4.0, 2.0, nan]"
+lasso,0.1337302511228276,68,-84143.22431767083,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0044, -1.8614, -0.6703, -0.0198]","[4.0, 4.0, 2.0, nan]"
+lasso,0.08235753591940385,68,-81861.21262945377,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.01, -1.9024, -0.7482, -0.0244]","[4.0, 4.0, 2.0, nan]"
+lasso,0.05071974116377088,68,-80469.40338745453,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0133, -1.9276, -0.7975, -0.0273]","[4.0, 4.0, 2.0, nan]"
+lasso,2.4512497076292066,79,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,79,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,79,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,79,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,79,-95102.29772343933,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-1.6864, -0.2085, -0.0004]","[4.0, 2.0, nan]"
+lasso,0.2171480710991139,79,-88482.59381668433,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-1.7947, -0.5126, -0.0124]","[4.0, 2.0, nan]"
+lasso,0.1337302511228276,79,-84143.22431767083,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0044, -1.8614, -0.6703, -0.0198]","[4.0, 4.0, 2.0, nan]"
+lasso,0.08235753591940385,79,-81861.21262945377,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.01, -1.9024, -0.7482, -0.0244]","[4.0, 4.0, 2.0, nan]"
+lasso,0.05071974116377088,79,-80469.40338745453,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0133, -1.9276, -0.7975, -0.0273]","[4.0, 4.0, 2.0, nan]"
+lasso,2.4512497076292066,90,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,90,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,90,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,90,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,90,-95102.29772343933,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-1.6864, -0.2085, -0.0004]","[4.0, 2.0, nan]"
+lasso,0.2171480710991139,90,-88482.59381668433,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-1.7947, -0.5126, -0.0124]","[4.0, 2.0, nan]"
+lasso,0.1337302511228276,90,-84143.22431767083,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0044, -1.8614, -0.6703, -0.0198]","[4.0, 4.0, 2.0, nan]"
+lasso,0.08235753591940385,90,-81861.21262945377,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.01, -1.9024, -0.7482, -0.0244]","[4.0, 4.0, 2.0, nan]"
+lasso,0.05071974116377088,90,-80469.40338745453,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0133, -1.9276, -0.7975, -0.0273]","[4.0, 4.0, 2.0, nan]"
+lasso,2.4512497076292066,100,-3.169633919048978e+31,[],[],[]
+lasso,1.5095977473195672,100,-338136.26353959006,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-0.7532],[4.0]
+lasso,0.9296830721160588,100,-147692.0986905231,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.217],[4.0]
+lasso,0.5725436568210424,100,-107057.77653448601,"['n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))']",[-1.5026],[4.0]
+lasso,0.35259998681043986,100,-88000.2207159403,"['b_nullary(arm-empty)', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[0.2065, -1.6866, -0.002, -0.0002]","[1.0, 4.0, 2.0, nan]"
+lasso,0.2171480710991139,100,-72805.63688625541,"['b_nullary(arm-empty)', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[0.5106, -1.7949, -0.002, -0.0122]","[1.0, 4.0, 2.0, nan]"
+lasso,0.1337302511228276,100,-65027.55037389323,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'b_nullary(arm-empty)', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0044, 0.6682, -1.8616, -0.002, -0.0196]","[4.0, 1.0, 4.0, 2.0, nan]"
+lasso,0.08235753591940385,100,-61280.65282873127,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'b_nullary(arm-empty)', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0101, 0.746, -1.9027, -0.002, -0.0241]","[4.0, 1.0, 4.0, 2.0, nan]"
+lasso,0.05071974116377088,100,-59035.08052517622,"['n_count(c_some(r_top,c_primitive(holding,0)))', 'b_nullary(arm-empty)', 'n_concept_distance(c_primitive(clear,0),r_primitive(on,0,1),c_primitive(clear_g,0))', 'n_count(c_primitive(holding,0))', 'F_0']","[-0.0133, 0.7953, -1.928, -0.002, -0.0269]","[4.0, 1.0, 4.0, 2.0, nan]"
