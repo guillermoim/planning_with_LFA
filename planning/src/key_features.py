@@ -70,6 +70,8 @@ def get_key_features(task, regression=0):
         if not regression:
             feats = []
         if regression:
-            feats = ['F_0', 'F_1']
+            feats = ['F_0']
+            weights = np.array([-1.0,])
+            bias = 0
 
     return feats, weights, bias

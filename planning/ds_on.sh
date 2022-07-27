@@ -1,1 +1,1 @@
-python dataset_creator.py --domain_name blocksworld --multipath multiples/blocksworld-on.csv --formula_path ../formula_interpreter/blocks-on.txt --flag_features --max_complexity 5 --task 'blocksworld-on'
+python dataset_creator.py --domain_name blocksworld --multipath multiples/blocksworld-on.csv --formula_path ../formula_interpreter/blocks-on.txt --flag_features --max_complexity 5 --task 'blocksworld-on' --max_complexity 8

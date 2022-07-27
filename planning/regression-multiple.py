@@ -31,6 +31,8 @@ if __name__ == "__main__":
     parser.add_argument("--method", type=str, default='l0learn')
     parser.add_argument("--bins", type=int, default=10)
     parser.add_argument("--task", type=str, required=True)
+    parser.add_argument("--max_complexity", type=int, required=True)
+    parser.add_argument("--threshold", type=float, default=1.)
 
     args = parser.parse_args()
 
@@ -39,6 +41,8 @@ if __name__ == "__main__":
     bins = args.bins
     method = args.method
     task = args.task
+    max_complexity = args.max_complexity
+    threshold = args.threshold
 
     X, y, names, complexities = None, None, None, None
 
@@ -49,9 +53,9 @@ if __name__ == "__main__":
             if subfile == '':
                 break
             if i < 1:
-                X, y, names, complexities = data_loader(subfile)
+                X, y, names, complexities = data_loader(subfile, max_complexity)
             else:
-                X_, y_, _, _ = data_loader(subfile)
+                X_, y_, _, _ = data_loader(subfile, max_complexity)
 
                 X, y = np.vstack([X, X_]), np.concatenate([y, y_])
 
@@ -164,4 +168,4 @@ if __name__ == "__main__":
                 res.extend(res3)
 
     df = pd.DataFrame.from_records(res)
-    df.to_csv(f"{outpath}.csv", index=False)
+    df.to_csv(f"{outpath}-k{max_complexity}-th{threshold}.csv", index=False)

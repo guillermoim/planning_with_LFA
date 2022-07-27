@@ -37,13 +37,13 @@ def _remove_duplicated_features(df, y, to_keep):
 
     return df
 
-def _remove_completely_correlated_features(df, to_keep):
+def _remove_correlated_features(df, to_keep, threshold=1):
     
     corr_matrix = df.corr().abs()
 
     upper_tri = corr_matrix.where(np.triu(np.ones(corr_matrix.shape),k=1).astype(np.bool_))
 
-    to_drop = [column for column in upper_tri.columns if any(upper_tri[column] == 1) and column not in to_keep]
+    to_drop = [column for column in upper_tri.columns if any(upper_tri[column] >= threshold) and column not in to_keep]
 
     df.drop(to_drop, axis=1, inplace=True)
 
@@ -60,7 +60,7 @@ def preprocess_data(X, y, names, complexities, base_feat):
 
     df = _remove_constant_features(df, y, base_feat)
     df = _remove_duplicated_features(df, y, base_feat)
-    df = _remove_completely_correlated_features(df, base_feat)
+    df = _remove_correlated_features(df, base_feat)
 
     _, p1 = df.shape
 
@@ -114,9 +114,9 @@ if __name__ == '__main__':
 
     print('Original shape', df.shape)
 
-    df = remove_constant_features(df, y, base_feat)
-    df = remove_duplicated_features(df, y, base_feat)
-    df = remove_completely_correlated_features(df, base_feat)
+    df = _remove_constant_features(df, y, base_feat)
+    df = _remove_duplicated_features(df, y, base_feat)
+    df = _remove_completely_correlated_features(df, base_feat)
 
     print('Processed shape', df.shape)
     print(list(map(lambda x: x in df.columns, base_feat)))

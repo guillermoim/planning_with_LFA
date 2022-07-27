@@ -1,29 +1,29 @@
 state;V*
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'carry(ball1,left)', 'at(ball2,roomb)', 'gripper(left)'});-2
-frozenset({'at(ball1,rooma)', 'at-robby(rooma)', 'ball(ball2)', 'free(left)', 'carry(ball2,right)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'gripper(left)'});-3
-frozenset({'ball(ball2)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at-robby(roomb)', 'carry(ball1,left)', 'at(ball2,roomb)', 'gripper(left)'});-1
-frozenset({'at(ball1,rooma)', 'ball(ball2)', 'free(left)', 'carry(ball2,right)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'at-robby(roomb)', 'gripper(left)'});-4
-frozenset({'ball(ball2)', 'at(ball2,rooma)', 'ball(ball1)', 'room(rooma)', 'gripper(right)', 'room(roomb)', 'free(right)', 'carry(ball1,left)', 'at-robby(roomb)', 'gripper(left)'});-1
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'carry(ball2,right)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'carry(ball1,left)', 'gripper(left)'});-2
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'at(ball2,rooma)', 'ball(ball1)', 'room(rooma)', 'gripper(right)', 'room(roomb)', 'free(right)', 'carry(ball1,left)', 'gripper(left)'});-2
-frozenset({'at(ball1,rooma)', 'at-robby(rooma)', 'ball(ball2)', 'free(left)', 'at(ball2,rooma)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'gripper(left)'});-3
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'carry(ball1,right)', 'free(left)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'at(ball2,roomb)', 'gripper(left)'});-2
-frozenset({'at(ball1,rooma)', 'ball(ball2)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at-robby(roomb)', 'gripper(left)', 'carry(ball2,left)'});-4
-frozenset({'ball(ball2)', 'free(left)', 'at(ball2,rooma)', 'ball(ball1)', 'room(rooma)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at-robby(roomb)', 'gripper(left)', 'at(ball1,roomb)'});0
-frozenset({'ball(ball2)', 'carry(ball2,right)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'carry(ball1,left)', 'at-robby(roomb)', 'gripper(left)'});-1
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'carry(ball1,right)', 'free(left)', 'at(ball2,rooma)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'gripper(left)'});-2
-frozenset({'at(ball1,rooma)', 'at-robby(rooma)', 'ball(ball2)', 'free(left)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at(ball2,roomb)', 'gripper(left)'});-3
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'carry(ball1,right)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'gripper(left)', 'carry(ball2,left)'});-2
-frozenset({'at(ball1,rooma)', 'ball(ball2)', 'free(left)', 'at(ball2,rooma)', 'ball(ball1)', 'room(rooma)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at-robby(roomb)', 'gripper(left)'});-4
-frozenset({'at(ball1,rooma)', 'ball(ball2)', 'free(left)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at-robby(roomb)', 'at(ball2,roomb)', 'gripper(left)'});-4
-frozenset({'ball(ball2)', 'carry(ball1,right)', 'free(left)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'at-robby(roomb)', 'at(ball2,roomb)', 'gripper(left)'});-1
-frozenset({'ball(ball2)', 'free(left)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at-robby(roomb)', 'at(ball2,roomb)', 'gripper(left)', 'at(ball1,roomb)'});0
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'free(left)', 'at(ball2,rooma)', 'ball(ball1)', 'room(rooma)', 'gripper(right)', 'room(roomb)', 'free(right)', 'gripper(left)', 'at(ball1,roomb)'});0
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'free(left)', 'carry(ball2,right)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'gripper(left)', 'at(ball1,roomb)'});0
-frozenset({'ball(ball2)', 'carry(ball1,right)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'at-robby(roomb)', 'gripper(left)', 'carry(ball2,left)'});-1
-frozenset({'ball(ball2)', 'carry(ball1,right)', 'free(left)', 'at(ball2,rooma)', 'ball(ball1)', 'room(rooma)', 'gripper(right)', 'room(roomb)', 'at-robby(roomb)', 'gripper(left)'});-1
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'free(left)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at(ball2,roomb)', 'gripper(left)', 'at(ball1,roomb)'});0
-frozenset({'ball(ball2)', 'carry(ball2,right)', 'free(left)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'at-robby(roomb)', 'gripper(left)', 'at(ball1,roomb)'});0
-frozenset({'ball(ball2)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'at-robby(roomb)', 'gripper(left)', 'at(ball1,roomb)', 'carry(ball2,left)'});0
-frozenset({'at(ball1,rooma)', 'at-robby(rooma)', 'ball(ball2)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'gripper(left)', 'carry(ball2,left)'});-3
-frozenset({'at-robby(rooma)', 'ball(ball2)', 'room(rooma)', 'ball(ball1)', 'gripper(right)', 'room(roomb)', 'free(right)', 'gripper(left)', 'at(ball1,roomb)', 'carry(ball2,left)'});0
+frozenset({'ball(ball1)', 'at(ball1,rooma)', 'ball(ball2)', 'gripper(left)', 'carry(ball2,right)', 'room(roomb)', 'at-robby(rooma)', 'free(left)', 'gripper(right)', 'room(rooma)'});-3
+frozenset({'carry(ball2,left)', 'ball(ball1)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'gripper(right)', 'room(rooma)', 'carry(ball1,right)'});-2
+frozenset({'free(right)', 'carry(ball1,left)', 'ball(ball1)', 'at(ball2,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'gripper(right)', 'room(rooma)', 'at-robby(roomb)'});-1
+frozenset({'ball(ball1)', 'ball(ball2)', 'gripper(left)', 'carry(ball2,right)', 'room(roomb)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at(ball1,roomb)', 'at-robby(roomb)'});0
+frozenset({'free(right)', 'ball(ball1)', 'at(ball2,rooma)', 'ball(ball2)', 'at(ball1,rooma)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'free(left)', 'gripper(right)', 'room(rooma)'});-3
+frozenset({'carry(ball2,left)', 'free(right)', 'ball(ball1)', 'at(ball1,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'gripper(right)', 'room(rooma)'});-3
+frozenset({'carry(ball2,left)', 'free(right)', 'ball(ball1)', 'at(ball1,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'gripper(right)', 'room(rooma)', 'at-robby(roomb)'});-4
+frozenset({'free(right)', 'ball(ball1)', 'at(ball2,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at(ball1,roomb)', 'at-robby(roomb)'});0
+frozenset({'ball(ball1)', 'at(ball1,rooma)', 'ball(ball2)', 'gripper(left)', 'carry(ball2,right)', 'room(roomb)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at-robby(roomb)'});-4
+frozenset({'ball(ball1)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at(ball2,roomb)', 'carry(ball1,right)'});-2
+frozenset({'free(right)', 'ball(ball1)', 'carry(ball1,left)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'gripper(right)', 'room(rooma)', 'at(ball2,roomb)', 'at-robby(roomb)'});-1
+frozenset({'ball(ball1)', 'ball(ball2)', 'gripper(left)', 'carry(ball2,right)', 'room(roomb)', 'at-robby(rooma)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at(ball1,roomb)'});0
+frozenset({'free(right)', 'ball(ball1)', 'carry(ball1,left)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'gripper(right)', 'room(rooma)', 'at(ball2,roomb)'});-2
+frozenset({'carry(ball2,left)', 'ball(ball1)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'gripper(right)', 'room(rooma)', 'at-robby(roomb)', 'carry(ball1,right)'});-1
+frozenset({'carry(ball2,left)', 'free(right)', 'ball(ball1)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'gripper(right)', 'room(rooma)', 'at(ball1,roomb)'});0
+frozenset({'free(right)', 'ball(ball1)', 'carry(ball1,left)', 'at(ball2,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'gripper(right)', 'room(rooma)'});-2
+frozenset({'free(right)', 'ball(ball1)', 'at(ball1,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at(ball2,roomb)'});-3
+frozenset({'free(right)', 'ball(ball1)', 'ball(ball2)', 'room(rooma)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'free(left)', 'gripper(right)', 'at(ball2,roomb)', 'at(ball1,roomb)'});0
+frozenset({'ball(ball1)', 'at(ball2,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at-robby(roomb)', 'carry(ball1,right)'});-1
+frozenset({'ball(ball1)', 'carry(ball1,left)', 'ball(ball2)', 'gripper(left)', 'carry(ball2,right)', 'room(roomb)', 'gripper(right)', 'room(rooma)', 'at-robby(roomb)'});-1
+frozenset({'free(right)', 'ball(ball1)', 'at(ball1,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at(ball2,roomb)', 'at-robby(roomb)'});-4
+frozenset({'free(right)', 'ball(ball1)', 'at(ball2,rooma)', 'ball(ball2)', 'at(ball1,rooma)', 'gripper(left)', 'room(roomb)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at-robby(roomb)'});-4
+frozenset({'ball(ball1)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at(ball2,roomb)', 'at-robby(roomb)', 'carry(ball1,right)'});-1
+frozenset({'ball(ball1)', 'at(ball2,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'free(left)', 'gripper(right)', 'room(rooma)', 'carry(ball1,right)'});-2
+frozenset({'free(right)', 'ball(ball1)', 'at(ball2,rooma)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'at-robby(rooma)', 'free(left)', 'gripper(right)', 'room(rooma)', 'at(ball1,roomb)'});0
+frozenset({'free(right)', 'ball(ball1)', 'ball(ball2)', 'room(rooma)', 'gripper(left)', 'room(roomb)', 'free(left)', 'gripper(right)', 'at(ball2,roomb)', 'at(ball1,roomb)', 'at-robby(roomb)'});0
+frozenset({'carry(ball2,left)', 'free(right)', 'ball(ball1)', 'ball(ball2)', 'gripper(left)', 'room(roomb)', 'gripper(right)', 'room(rooma)', 'at(ball1,roomb)', 'at-robby(roomb)'});0
+frozenset({'ball(ball1)', 'carry(ball1,left)', 'ball(ball2)', 'gripper(left)', 'carry(ball2,right)', 'room(roomb)', 'at-robby(rooma)', 'gripper(right)', 'room(rooma)'});-2

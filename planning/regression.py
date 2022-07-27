@@ -27,17 +27,19 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Linear Regression")
     parser.add_argument("--filepath", type=str)
     parser.add_argument("--bins", type=int, default=10)
-    parser.add_argument("--method", type=str, default='L0learn')
+    parser.add_argument("--method", type=str, default='l0learn')
+    parser.add_argument("--max_complexity", type=int, default=4)
 
     args = parser.parse_args()
 
     filepath = args.filepath
     bins = args.bins
     method = args.method
+    max_complexity = args.max_complexity
 
     basepath = os.path.dirname(filepath)
 
-    X, y, names, complexities = data_loader(filepath)
+    X, y, names, complexities = data_loader(filepath, max_complexity)
     y = np.abs(y)
 
     n, p = X.shape
@@ -127,7 +129,7 @@ if __name__ == "__main__":
 
         oo = os.path.basename(basepath)
 
-        if "L0learn" == method:
+        if "l0learn" == method:
             os.makedirs(f"outputs/{oo}/l0learn", exist_ok=True)
             path = f"outputs/{oo}/l0learn"
             with open(f"{path}/{N}-features.out", "w") as f:
@@ -139,4 +141,4 @@ if __name__ == "__main__":
 
         sys.stdout = old_stdout
     df = pd.DataFrame.from_records(simulations)
-    df.to_csv(os.path.join(basepath, f"regression.csv"), index=False)
+    df.to_csv(os.path.join(basepath, f"regression-k{max_complexity}-{method}.csv"), index=False)

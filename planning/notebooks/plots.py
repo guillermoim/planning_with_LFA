@@ -16,12 +16,11 @@ def max_score_by_parameter(df, features):
     ax.set_xticks(df.parameter.to_numpy())
     ax.set_xscale("log")
     
-def minmax_score_by_num_features(df, step=5, mode='max', ylim=(0.9, 1.001)):
+def max_score_by_num_features(df):
     
-    if mode == 'max':
-        df = df.loc[df.groupby('total_features')["score"].idxmax()]
-    else:
-        df = df.loc[df.groupby('total_features')["score"].idxmin()]
+    xticks = df.total_features.unique()
+    
+    df = df.loc[df.groupby('total_features')["score"].idxmax()]
     fig, ax = plt.subplots(1,1, figsize=(9, 6))
 
     ax2 = ax.twinx()
@@ -29,14 +28,15 @@ def minmax_score_by_num_features(df, step=5, mode='max', ylim=(0.9, 1.001)):
     ax.set_title(f'Max. score (and opt. param.) by # of features')
     ax.plot(df.total_features.to_numpy(), df.score.to_numpy())
     
-    ax.set_ylim(ylim)
+    ax.set_ylim((0.9, 1.001))
     ax.set_ylabel('score - $R^2$')
     ax.set_xlabel('# features considered')
     
-    ax.set_xticks(df.total_features.to_numpy()[::step], rotation=-75)
+    ax.set_xticks(df.total_features.to_numpy(), rotation=-75)
 
     
     ax2.plot(df.total_features.to_numpy(), df.parameter.to_numpy(), color='red')
+    ax2.set_yticks(df.parameter.unique())
     ax2.set_yscale("log")
     ax2.set_ylabel('$\lambda$')
     ax2.tick_params(axis='x', labelbottom=False)

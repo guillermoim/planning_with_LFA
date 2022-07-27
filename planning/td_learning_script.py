@@ -5,7 +5,7 @@ import numpy as np
 
 from src import *
 import sys
-
+from regression import preprocess_data
 
 def _load_env(domain, instance_filepath):
     instance = InstanceData(instance_filepath, domain)
@@ -41,9 +41,7 @@ def td_learning(W, domain, instance_filepath, value_function_filepath, matrix_fi
     
     # 
     V = _read_value_function(value_function_filepath)
-
     X, y, feature_names, _ = data_loader(matrix_filepath)
-    
     states_ordered = list(V.keys())
     del V
 
